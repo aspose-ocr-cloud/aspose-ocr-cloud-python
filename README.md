@@ -25,17 +25,16 @@ BMP, JPG, GIF, PNG, TIFF
 
 Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](#asposeocr-cloud-sdks) in many development languages to make it easier to integrate with us.
 
-## Examples
+## OCR in Python
 
 ```python
-from asposeocrcloud.configuration import Configuration
-from asposeocrcloud.api.ocr_api import OcrApi
-configuration = Configuration(apiKey="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", appSid="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")
-api = OcrApi(configuration)
+	# Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
 
-file_path = r"\your\file\path\5.png"
-res = api.post_recognize_from_content(file_path)
-print(res.text)
+	ocr_api = asposeocrcloud.OcrApi('MY_CLIENT_SECRET', 'MY_CLIENT_ID')
+
+	file_path = r"\your\file\path\sample.png"
+	res = ocr_api.post_recognize_from_content(file_path)
+	print(res.text)
 ```
 _________________________
 
