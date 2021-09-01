@@ -188,6 +188,8 @@ class ApiClient(six.with_metaclass(TypeWithDefault, object)):
         """
         if obj is None:
             return None
+        elif isinstance(obj, enum.IntFlag):
+            return int(obj)
         elif isinstance(obj, self.PRIMITIVE_TYPES):
             return obj
         elif isinstance(obj, enum.Enum):

@@ -51,7 +51,7 @@ class OcrApi(object):
     #                  OCR Text Page Recognition API
     ##########################################################
 
-    def post_recognize_from_url(self, url, **kwargs):
+    def post_recognize_from_url(self, url, params, **kwargs):
         """  Recognize image text from some url - give us file URL and we will download it and recognize.
 
         This method makes a synchronous HTTP request by default. To make an
@@ -63,12 +63,12 @@ class OcrApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.__post_recognize_from_url(url, **kwargs)
+            return self.__post_recognize_from_url(url, params, **kwargs)
         else:
-            (data) = self.__post_recognize_from_url(url, **kwargs)
+            (data) = self.__post_recognize_from_url(url, params, **kwargs)
             return data
 
-    def __post_recognize_from_url(self, url, **kwargs):
+    def __post_recognize_from_url(self, url, query_params, **kwargs):
         assert url is not None
         """ TBD Recognize image text from some url if provided or from the request body content
 
@@ -95,7 +95,9 @@ class OcrApi(object):
         collection_formats = {}
         path_params = {}  # uri params #
 
-        query_params = {'url': url}  # content query params
+        url_param = {'url': url}  # content query params
+        query_params = query_params.__dict__
+        query_params = {**url_param, **query_params}
 
         header_params = {}
         form_params = {}
@@ -103,8 +105,10 @@ class OcrApi(object):
         body_params = None
 
         # HTTP header `Accept`
+        # header_params['Accept'] = self.api_client.select_header_accept(
+        #     ['multipart/form-data'])
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['multipart/form-data'])
+            ['application/json'])
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(
@@ -118,7 +122,7 @@ class OcrApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'))
 
-    def post_recognize_from_content(self, file_path, **kwargs):
+    def post_recognize_from_content(self, file_path, query_params, **kwargs):
         """  Recognize image text from content - provide local filepath to send it in Aspose.OCR Cloud directly
 
         This method makes a synchronous HTTP request by default. To make an
@@ -130,12 +134,12 @@ class OcrApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.__post_recognize_from_content(file_path, **kwargs)
+            return self.__post_recognize_from_content(file_path, query_params, **kwargs)
         else:
-            (data) = self.__post_recognize_from_content(file_path, **kwargs)
+            (data) = self.__post_recognize_from_content(file_path, query_params, **kwargs)
             return data
 
-    def __post_recognize_from_content(self, file_path, **kwargs):
+    def __post_recognize_from_content(self, file_path, query_params, **kwargs):
         assert file_path is not None
         """ Recognize image text from content - provide local filepath to send it in Aspose.OCR Cloud directly
 
@@ -161,11 +165,20 @@ class OcrApi(object):
 
         collection_formats = {}
         path_params = {}  # uri params #
-        query_params = {}  # content query params
+
+        query_params = query_params.__dict__
+        print(query_params)
+        # query_params = {"skewCorrect": False}  # content query params
+
         header_params = {}
         form_params = {}
-        local_var_files = {"File": file_path}
+        local_var_files = {}
+        # local_var_files = {"File": file_path}
         body_params = []
+
+        with open(file_path, 'rb') as f:
+            data = f.read()
+            body_params = data
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
@@ -173,7 +186,7 @@ class OcrApi(object):
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(
-            ['multipart/form-data'])
+            ['application/octet-stream'])
 
         return self.api_client.call_api('/ocr/recognize', 'POST', path_params, query_params, header_params,
                                         body=body_params, post_params=form_params, files=local_var_files,
@@ -183,7 +196,7 @@ class OcrApi(object):
                                         _preload_content=params.get('_preload_content', True),
                                         _request_timeout=params.get('_request_timeout'))
 
-    def get_recognize_from_storage(self, file, folder="", storage="", **kwargs):
+    def get_recognize_from_storage(self, query_params, file, folder="", storage="",  **kwargs):
         """  Recognize image text from the Aspose.Storage. Put your file in storage and give us path.
 
         This method makes a synchronous HTTP request by default. To make an
@@ -196,12 +209,12 @@ class OcrApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.__get_recognize_from_storage(file, folder, storage, **kwargs)
+            return self.__get_recognize_from_storage(file, folder, storage, query_params, **kwargs)
         else:
-            (data) = self.__get_recognize_from_storage(file, folder, storage, **kwargs)
+            (data) = self.__get_recognize_from_storage(file, folder, storage, query_params, **kwargs)
             return data
 
-    def __get_recognize_from_storage(self, file, folder, storage, **kwargs):
+    def __get_recognize_from_storage(self, file, folder, storage, query_params, **kwargs):
         assert file is not None
         """ Recognize image text from the Aspose.Storage. Put your file in storage and give us path.
 
@@ -229,8 +242,13 @@ class OcrApi(object):
 
         collection_formats = {}
         path_params = {'name': file}  # uri params #
-        query_params = {'storage': storage,
-                        'folder': folder}  # content query params
+
+        storage_params = {'storage': storage,
+                          'folder': folder}  # content query params
+
+        query_params = query_params.__dict__
+        query_params = {**storage_params, **query_params}
+
         header_params = {}
         form_params = {}
         local_var_files = {}
