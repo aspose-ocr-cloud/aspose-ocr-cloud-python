@@ -7,6 +7,11 @@ In detail, it's a set of SDKs for optical character recognition and document sca
 
 It is easy to get started with Aspose.OCR Cloud, and there is nothing to install. Create an account at Aspose Cloud and get your application information, then you are ready to use [SDKs](#asposeocr-cloud-sdks)
 
+
+## Release 21.09
+Added new recognition languages: Bengali, Tibetan, Thai, Urdu, Turkish, Korean, Indonesian, Hebrew, Javanese, Greek, Japanese, Persian
+
+
 ## Features
 - Automated skew correction
 - Automated and manual document layout detection
@@ -19,6 +24,9 @@ It is easy to get started with Aspose.OCR Cloud, and there is nothing to install
 - Supports PDF Recognition
 - Text correction using spell checking algorithms
 - Various output formats: Text, Searchable PDF, hOCR, Excel for tables.
+
+## Recognize text of different languages
+Aspose.OCR Cloud supports 38 languages including English, German, French, Italian, Spanish, Portuguese, Polish, Slovene, Slovak, Netherlands, Lithuanian, Latvian, Danish, Norwegian, Finnish, Serbian, Croatian, Czech, Swedish, Estonian, Romanian, Chinese, Arabic, Hindi, Russian, Ukrainian, Bengali, Tibetan, Thai, Urdu, Turkish, Korean, Indonesian, Hebrew, Javanese, Greek, Japanese, Persian and a lot of other works too.
 
 ## Save OCR As
 TXT, PDF, HOCR
