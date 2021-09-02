@@ -7,13 +7,18 @@ In detail, it's a set of SDKs for optical character recognition and document sca
 
 It is easy to get started with Aspose.OCR Cloud, and there is nothing to install. Create an account at Aspose Cloud and get your application information, then you are ready to use [SDKs](#asposeocr-cloud-sdks)
 
-## OCR Processing Features
-- Recognize and extract text from images via OCR.
-- Specify the area of the image from which you want to extract text.
-- Perform OCR to recognize text from the whole or partial image.
-- Fetch character and font information from raster images.
-- Return the response in the JSON or XML format.
-- Supports English text recognition.
+## Features
+- Automated skew correction
+- Automated and manual document layout detection
+- Recognize documents with complex layouts in fully automatic mode or with manual corrections.
+- Extract and recognize text from images via OCR
+- Supports multiple international languages
+- High speed with no hardware resources
+- Receipt recognition
+- Table image recognition
+- Supports PDF Recognition
+- Text correction using spell checking algorithms
+- Various output formats: Text, Searchable PDF, hOCR, Excel for tables.
 
 ## Save OCR As
 TXT, PDF, HOCR
