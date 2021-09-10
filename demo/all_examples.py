@@ -7,29 +7,35 @@ from asposeocrcloud.models import OCRRect, OCRRegion, OCRRequestData, OCRRequest
 def ocr_from_url(configuration):
     # Instantiate API Class
     api = OcrApi(configuration)
+    params = Parameters(LanguageGroup.ENGLISH, ResultType.Text, False, False, DSRPipeline.DsrNoFilter,
+                        DSRConfidence.Mid, False)
     # Send request (Only English language supported for this request type)
-    res = api.post_recognize_from_url("https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png")
+    res = api.post_recognize_from_url("https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png", params)
     print(res.text)
 
 
 def ocr_send_file(configuration):
     # Instantiate API Class
     api = OcrApi(configuration)
+    params = Parameters(LanguageGroup.ENGLISH, ResultType.Text, False, False, DSRPipeline.DsrNoFilter,
+                        DSRConfidence.Mid, False)
     # Send request (Only English language supported for this request type)
-    res = api.post_recognize_from_content(r"..\testdata\de_1.jpg")
+    res = api.post_recognize_from_content(r"..\testdata\de_1.jpg",params)
     print(res.text)
 
 
 def ocr_from_aspose_storage(configuration):
     # Instantiate Storage API Class
+
     api_storage = asposeocrcloud.api.storage_api.StorageApi(configuration)
     # Upload file to storage
     api_storage.upload_file("5.png", r"..\testdata\5.png")
-
+    params = Parameters(LanguageGroup.ENGLISH, ResultType.Text, False, False, DSRPipeline.DsrNoFilter,
+                        DSRConfidence.Mid, False)
     # Instantiate OCR API Class
     api_ocr = OcrApi(configuration)
     # Send request (Only English language supported for this request type)
-    res = api_ocr.get_recognize_from_storage("5.png")
+    res = api_ocr.get_recognize_from_storage("5.png",params)
     print(res.text)
 
 
