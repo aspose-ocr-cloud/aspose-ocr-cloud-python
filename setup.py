@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 from os import path
 
 NAME = "aspose-ocr-cloud"
-VERSION = "20.8.1"
+VERSION = "21.9.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -57,13 +57,4 @@ setup(
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True
-    # long_description="""
-    # Aspose.OCR Cloud API Reference
-    # This package contains Aspose.OCR Cloud SDK for Python.
-    # This SDK allows you to work with Aspose.OCR Cloud REST APIs in your Python applications, and integrate OCR functionality in few steps.
-    #
-    # In detail, it's a set of SDKs for optical character recognition and document scanning in our Cloud. It supports reading and recognizing text from most commonly used raster image formats. Just pass a specific image to the Aspose.OCR Cloud API, and it will return a response with recognized text.
-    #
-    # It is easy to get started with Aspose.OCR Cloud, and there is nothing to install locally or configure servers. Create an account at Aspose Cloud and get your application KEY, import this python, module, initialize "Configuration. class with this keys, and then you are ready to use the API.
-    # """
 )
