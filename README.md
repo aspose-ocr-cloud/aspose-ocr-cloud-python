@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/api-v3.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/aspose-ocr-cloud) ![PyPI - Format](https://img.shields.io/pypi/format/aspose-ocr-cloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/aspose-ocr-cloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aspose-ocr-cloud) [![GitHub license](https://img.shields.io/github/license/aspose-ocr-cloud/aspose-ocr-cloud-python)](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-python/blob/master/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/Aspose-ocr-Cloud/aspose-ocr-cloud-python)
+![](https://img.shields.io/badge/api-v5.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/aspose-ocr-cloud) ![PyPI - Format](https://img.shields.io/pypi/format/aspose-ocr-cloud) ![PyPI - Downloads](https://img.shields.io/pypi/dm/aspose-ocr-cloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aspose-ocr-cloud) [![GitHub license](https://img.shields.io/github/license/aspose-ocr-cloud/aspose-ocr-cloud-python)](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-python/blob/master/LICENSE) ![GitHub last commit](https://img.shields.io/github/last-commit/Aspose-ocr-Cloud/aspose-ocr-cloud-python)
 
 # Python Cloud REST API for OCR
 Aspose OCR Cloud Android SDK is a simple OCR technology, which you can use in your application to convert image to text.
@@ -12,11 +12,26 @@ It is easy to get started with Aspose.OCR Cloud, and there is nothing to install
 :---: | :---: | :---:| :---:
 [![Scan Image](https://products.aspose.app/ocr/scan-image/img/ocr-recognize-48.png)](https://products.aspose.app/ocr/scan-image) | [![Image to Searchable PDF](https://products.aspose.app/ocr/scan-image/img/ocr-to-pdf-4-48.png)](https://products.aspose.app/ocr/ocr-to-pdf) | [![PDF OCR](https://products.aspose.app/ocr/scan-image/img/ocr-to-pdf-2-48.png)](https://products.aspose.app/ocr/pdf-ocr) | [![Receipt Scanner](https://products.aspose.app/ocr/scan-image/img/aspose-scan-receipt-48.png)](https://products.aspose.app/ocr/scan-receipt) 
 
+## What was changed in version 23.6.0
 
-## Release 21.09
-Added new recognition languages: Bengali, Tibetan, Thai, Urdu, Turkish, Korean, Indonesian, Hebrew, Javanese, Greek, Japanese, Persian
+A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for Python 23.6.0** release:
 
+Key | Summary | Category
+--- | ------- | --------
+OCR-2893 | Detecting fonts and styles in scans or photographs. | New feature
+OCR-3454 | Extracting text from photographed signboards, price tags, plates, food labels, and similar images. | New feature
+n/a | Conversion of DjVu files to PDF documents. | New feature
+n/a | Image processing APIs were made easier and more consistent: <ul><li>[Skew correction](https://docs.aspose.cloud/ocr/deskew-image/);</li><li>[Dewarping](https://docs.aspose.cloud/ocr/dewarp-image/);</li><li>[Upsampling](https://docs.aspose.cloud/ocr/upsample-image/);</li><li>[Binarization](https://docs.aspose.cloud/ocr/binarize-image/).</li></ul> | Enhancement
+n/a | Reworked [text-to-speech conversion](https://docs.aspose.cloud/ocr/text-to-speech/) API. | Enhancement
 
+REST API changes:
+
+- https://releases.aspose.cloud/ocr/release-notes/2023/aspose-ocr-cloud-23-5-0-release-notes/
+- https://releases.aspose.cloud/ocr/release-notes/2023/aspose-ocr-cloud-23-6-0-release-notes/
+
+### Deprecation warning
+
+Updated image processing and text-to-speech conversion APIs are not backward compatible. To make code updates easier, previous APIs remain fully functional. All of your existing code will continue to work and you can even make minor updates to it, but be aware that all deprecated endpoints are planned to be removed in upcoming releases in favor of the new API.
 ## Features
 - Automated skew correction
 - Automated and manual document layout detection
@@ -46,13 +61,53 @@ Our API is completely independent of your operating system, database system, or 
 ## OCR in Python
 
 ```python
-	# Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+# Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
 
-	ocr_api = asposeocrcloud.OcrApi('MY_CLIENT_SECRET', 'MY_CLIENT_ID')
+	
+    with aspose_ocr_cloud.ApiClient(config) as api_client:
+        # Create an instance of the API class
+        api_instance = recognize_image_api.RecognizeImageApi(api_client)
 
-	file_path = r"\your\file\path\sample.png"
-	res = ocr_api.post_recognize_from_content(file_path)
-	print(res.text)
+        # Read image file and conver it into base64 string
+        image_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../samples/latin.png')
+
+        # Create request body
+        body = OCRRecognizeImageBody(
+            image=utils.file_to_base64(image_file_path),
+            settings=OCRSettingsRecognizeImage(
+                language=Language("English"),
+                makeSkewCorrect=False,
+                makeBinarization=False,
+                makeSpellCheck=False,
+                makeContrastCorrection=False,
+                makeUpsampling=False,
+                dsrMode=DsrMode("NoDsrNoFilter"),
+                dsrConfidence=DsrConfidence("Default"),
+                resultType=ResultType("Text")
+            ),
+        )
+        try:
+            # Step 1: perform post request
+            task_id_response = api_instance.post_recognize_image(
+                body=body,
+            )
+            task_id = task_id_response.body
+            print(f'Your task ID is {task_id}')
+
+            # Step 2: perform get result request
+            task_response : OCRResponse = api_instance.get_recognize_image(
+                query_params={'id':task_id}
+            )
+            assert task_response.response.status == 200
+            assert task_response.body['taskStatus'] == 'Completed'
+            recognized_text_raw = task_response.body['results'][0]['data']
+            recognized_text = bytearray(base64.b64decode(str(recognized_text_raw))).decode('utf-8')
+            print (f'Recognized text:\n{recognized_text}')
+            print (f'Task completed.Press Enter to continue')
+            input()
+
+        except aspose_ocr_cloud.ApiException as e:
+            print("Exception when calling RecognizeImageApi: %s\n" % e)
 ```
 _________________________
 
@@ -68,7 +123,7 @@ Make a personal account on [Aspose Cloud Dashboard](https://dashboard.aspose.clo
 
   * Checkout the SDK or get from [pip](https://pypi.org/project/aspose-ocr-cloud/) (pip install aspose-ocr-cloud)
   * Set Your AppSid & AppKey
-  * Run Python console [Demo](./demo/run.py) or [UnitTests](./test/test_ocr_api.py)
+  * Run Python console [Demo](./Example/run.py)
 
 
 <p align="center">
@@ -82,10 +137,9 @@ Make a personal account on [Aspose Cloud Dashboard](https://dashboard.aspose.clo
 ### Structure
 
 This project includes:   
-- Python console demo application - "[./demo](./demo/run.py)"
-- Module "asposeocrcloud" - this is SDK located in "[./asposeocrcloud](asposeocrcloud)". You can integrate it in your application. It contains both OCR and [Aspose.Storage](https://github.com/aspose-storage-cloud/) API
+- Python console demo application - "[./example](./example/run.py)"
+- Module "asposeocrcloud" - this is SDK located in "[./asposeocrcloud](asposeocrcloud)". You can integrate it in your application.
 - Module "test" - "[./test](./test)" UnitTest. You can take a look at them to see various code examples.
-- Module "demo" - "[./demo](./demo)" Sample console demo project.
 - Folder "docs" - "[./docs](./docs)" Full documentation for Aspose.OCR SDK in HTML format.
 
 ### Dependencies
