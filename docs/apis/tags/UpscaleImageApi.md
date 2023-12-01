@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_upscale_image**](#cancel_upscale_image) | **delete** /v5/UpscaleImage | CancelUpscaleImage
-[**get_upscale_image**](#get_upscale_image) | **get** /v5/UpscaleImage | GetUpscaleImage
-[**post_upscale_image**](#post_upscale_image) | **post** /v5/UpscaleImage | PostUpscaleImage
+[**cancel_upscale_image**](#cancel_upscale_image) | **delete** /v5.0/ocr/UpscaleImage | CancelUpscaleImage
+[**get_upscale_image**](#get_upscale_image) | **get** /v5.0/ocr/UpscaleImage | GetUpscaleImage
+[**post_upscale_image**](#post_upscale_image) | **post** /v5.0/ocr/UpscaleImage | PostUpscaleImage
 
 # **cancel_upscale_image**
 <a name="cancel_upscale_image"></a>

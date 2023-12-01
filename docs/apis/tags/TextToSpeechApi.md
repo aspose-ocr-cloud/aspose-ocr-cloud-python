@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_text_to_speech_result**](#get_text_to_speech_result) | **get** /v5/TextToSpeech/GetTextToSpeechResult | GetTextToSpeechResult
-[**get_text_to_speech_result_file**](#get_text_to_speech_result_file) | **get** /v5/TextToSpeech/GetTextToSpeechResultFile | GetTextToSpeechResultFile
-[**post_text_to_speech**](#post_text_to_speech) | **post** /v5/TextToSpeech/PostTextToSpeech | PostTextToSpeech
+[**get_text_to_speech_result**](#get_text_to_speech_result) | **get** /v5.0/ocr/TextToSpeech/GetTextToSpeechResult | GetTextToSpeechResult
+[**get_text_to_speech_result_file**](#get_text_to_speech_result_file) | **get** /v5.0/ocr/TextToSpeech/GetTextToSpeechResultFile | GetTextToSpeechResultFile
+[**post_text_to_speech**](#post_text_to_speech) | **post** /v5.0/ocr/TextToSpeech/PostTextToSpeech | PostTextToSpeech
 
 # **get_text_to_speech_result**
 <a name="get_text_to_speech_result"></a>

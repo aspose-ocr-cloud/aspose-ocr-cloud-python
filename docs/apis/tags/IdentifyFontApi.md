@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_identify_font**](#cancel_identify_font) | **delete** /v5/IdentifyFont | CancelIdentifyFont
-[**get_identify_font**](#get_identify_font) | **get** /v5/IdentifyFont | GetIdentifyFont
-[**post_identify_font**](#post_identify_font) | **post** /v5/IdentifyFont | PostIdentifyFont
+[**cancel_identify_font**](#cancel_identify_font) | **delete** /v5.0/ocr/IdentifyFont | CancelIdentifyFont
+[**get_identify_font**](#get_identify_font) | **get** /v5.0/ocr/IdentifyFont | GetIdentifyFont
+[**post_identify_font**](#post_identify_font) | **post** /v5.0/ocr/IdentifyFont | PostIdentifyFont
 
 # **cancel_identify_font**
 <a name="cancel_identify_font"></a>
@@ -240,7 +240,7 @@ with aspose_ocr_cloud.ApiClient(configuration) as api_client:
             language=Language("English"),
             make_skew_correct=True,
             make_spell_check=False,
-            make_contrast_correction=True,
+            make_contrast_correction=False,
             result_type=ResultType("Text"),
             rotate=1,
             make_binarization=True,

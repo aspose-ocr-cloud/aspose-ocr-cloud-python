@@ -5,12 +5,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_result_file**](#get_result_file) | **get** /v5/ImageProcessing/GetResultFile | GetResultFile
-[**get_result_task**](#get_result_task) | **get** /v5/ImageProcessing/GetResultTask | GetResultTask
-[**post_binarization_file**](#post_binarization_file) | **post** /v5/ImageProcessing/PostBinarizationFile | PostBinarizationFile
-[**post_dewarping_file**](#post_dewarping_file) | **post** /v5/ImageProcessing/PostDewarpingFile | PostDewarpingFile
-[**post_skew_correction_file**](#post_skew_correction_file) | **post** /v5/ImageProcessing/PostSkewCorrectionFile | PostSkewCorrectionFile
-[**post_upsampling_file**](#post_upsampling_file) | **post** /v5/ImageProcessing/PostUpsamplingImageFile | PostUpsamplingImageFile
+[**get_result_file**](#get_result_file) | **get** /v5.0/ocr/ImageProcessing/GetResultFile | GetResultFile
+[**get_result_task**](#get_result_task) | **get** /v5.0/ocr/ImageProcessing/GetResultTask | GetResultTask
+[**post_binarization_file**](#post_binarization_file) | **post** /v5.0/ocr/ImageProcessing/PostBinarizationFile | PostBinarizationFile
+[**post_dewarping_file**](#post_dewarping_file) | **post** /v5.0/ocr/ImageProcessing/PostDewarpingFile | PostDewarpingFile
+[**post_skew_correction_file**](#post_skew_correction_file) | **post** /v5.0/ocr/ImageProcessing/PostSkewCorrectionFile | PostSkewCorrectionFile
+[**post_upsampling_file**](#post_upsampling_file) | **post** /v5.0/ocr/ImageProcessing/PostUpsamplingImageFile | PostUpsamplingImageFile
 
 # **get_result_file**
 <a name="get_result_file"></a>

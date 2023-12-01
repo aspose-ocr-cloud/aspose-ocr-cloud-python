@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_recognize_pdf**](#cancel_recognize_pdf) | **delete** /v5/RecognizePdf | CancelRecognizePdf
-[**get_recognize_pdf**](#get_recognize_pdf) | **get** /v5/RecognizePdf | GetRecognizePdf
-[**post_recognize_pdf**](#post_recognize_pdf) | **post** /v5/RecognizePdf | PostRecognizePdf
+[**cancel_recognize_pdf**](#cancel_recognize_pdf) | **delete** /v5.0/ocr/RecognizePdf | CancelRecognizePdf
+[**get_recognize_pdf**](#get_recognize_pdf) | **get** /v5.0/ocr/RecognizePdf | GetRecognizePdf
+[**post_recognize_pdf**](#post_recognize_pdf) | **post** /v5.0/ocr/RecognizePdf | PostRecognizePdf
 
 # **cancel_recognize_pdf**
 <a name="cancel_recognize_pdf"></a>
@@ -241,7 +241,7 @@ with aspose_ocr_cloud.ApiClient(configuration) as api_client:
             language=Language("English"),
             make_skew_correct=True,
             make_spell_check=False,
-            make_contrast_correction=True,
+            make_contrast_correction=False,
             dsr_mode=DsrMode("Regions"),
             dsr_confidence=DsrConfidence("Default"),
             result_type=ResultType("Text"),

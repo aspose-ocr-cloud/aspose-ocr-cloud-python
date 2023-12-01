@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_binarize_image**](#cancel_binarize_image) | **delete** /v5/BinarizeImage | CancelBinarizeImage
-[**get_binarize_image**](#get_binarize_image) | **get** /v5/BinarizeImage | GetBinarizeImage
-[**post_binarize_image**](#post_binarize_image) | **post** /v5/BinarizeImage | PostBinarizeImage
+[**cancel_binarize_image**](#cancel_binarize_image) | **delete** /v5.0/ocr/BinarizeImage | CancelBinarizeImage
+[**get_binarize_image**](#get_binarize_image) | **get** /v5.0/ocr/BinarizeImage | GetBinarizeImage
+[**post_binarize_image**](#post_binarize_image) | **post** /v5.0/ocr/BinarizeImage | PostBinarizeImage
 
 # **cancel_binarize_image**
 <a name="cancel_binarize_image"></a>

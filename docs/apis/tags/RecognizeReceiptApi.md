@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_recognize_receipt**](#cancel_recognize_receipt) | **delete** /v5/RecognizeReceipt | CancelRecognizeReceipt
-[**get_recognize_receipt**](#get_recognize_receipt) | **get** /v5/RecognizeReceipt | GetRecognizeReceipt
-[**post_recognize_receipt**](#post_recognize_receipt) | **post** /v5/RecognizeReceipt | PostRecognizeReceipt
+[**cancel_recognize_receipt**](#cancel_recognize_receipt) | **delete** /v5.0/ocr/RecognizeReceipt | CancelRecognizeReceipt
+[**get_recognize_receipt**](#get_recognize_receipt) | **get** /v5.0/ocr/RecognizeReceipt | GetRecognizeReceipt
+[**post_recognize_receipt**](#post_recognize_receipt) | **post** /v5.0/ocr/RecognizeReceipt | PostRecognizeReceipt
 
 # **cancel_recognize_receipt**
 <a name="cancel_recognize_receipt"></a>
@@ -241,7 +241,7 @@ with aspose_ocr_cloud.ApiClient(configuration) as api_client:
             language=Language("English"),
             make_skew_correct=True,
             make_spell_check=False,
-            make_contrast_correction=True,
+            make_contrast_correction=False,
             rotate=1,
             make_binarization=True,
             make_upsampling=False,

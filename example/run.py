@@ -1,6 +1,7 @@
 import recognize_image_api_examples
 import binarize_image_api_examples
 import convert_text_to_speech_examples
+import convert_text_to_speech_trial_examples
 import utils
 
 from aspose_ocr_cloud.configuration import Configuration
@@ -8,6 +9,9 @@ from aspose_ocr_cloud.configuration import Configuration
 
 def run_demo():
     utils.create_results_dir()
+
+    config_trial = Configuration()
+    convert_text_to_speech_trial_examples.run_convert_text_to_speech_trial_demo(config_trial)
 
     config = Configuration(client_id='Your client_id', \
                            client_secret='Your client_secret')

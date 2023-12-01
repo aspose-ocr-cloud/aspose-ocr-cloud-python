@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_dewarp_image**](#cancel_dewarp_image) | **delete** /v5/DewarpImage | CancelDewarpImage
-[**get_dewarp_image**](#get_dewarp_image) | **get** /v5/DewarpImage | GetDewarpImage
-[**post_dewarp_image**](#post_dewarp_image) | **post** /v5/DewarpImage | PostDewarpImage
+[**cancel_dewarp_image**](#cancel_dewarp_image) | **delete** /v5.0/ocr/DewarpImage | CancelDewarpImage
+[**get_dewarp_image**](#get_dewarp_image) | **get** /v5.0/ocr/DewarpImage | GetDewarpImage
+[**post_dewarp_image**](#post_dewarp_image) | **post** /v5.0/ocr/DewarpImage | PostDewarpImage
 
 # **cancel_dewarp_image**
 <a name="cancel_dewarp_image"></a>

@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_convert_text_to_speech**](#cancel_convert_text_to_speech) | **delete** /v5/ConvertTextToSpeech | CancelConvertTextToSpeech
-[**get_convert_text_to_speech**](#get_convert_text_to_speech) | **get** /v5/ConvertTextToSpeech | GetConvertTextToSpeech
-[**post_convert_text_to_speech**](#post_convert_text_to_speech) | **post** /v5/ConvertTextToSpeech | PostConvertTextToSpeech
+[**cancel_convert_text_to_speech**](#cancel_convert_text_to_speech) | **delete** /v5.0/ocr/ConvertTextToSpeech | CancelConvertTextToSpeech
+[**get_convert_text_to_speech**](#get_convert_text_to_speech) | **get** /v5.0/ocr/ConvertTextToSpeech | GetConvertTextToSpeech
+[**post_convert_text_to_speech**](#post_convert_text_to_speech) | **post** /v5.0/ocr/ConvertTextToSpeech | PostConvertTextToSpeech
 
 # **cancel_convert_text_to_speech**
 <a name="cancel_convert_text_to_speech"></a>

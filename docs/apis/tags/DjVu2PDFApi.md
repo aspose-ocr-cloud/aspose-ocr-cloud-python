@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_dj_vu2_pdf**](#cancel_dj_vu2_pdf) | **delete** /v5/DjVu2PDF | CancelDjVu2PDF
-[**get_dj_vu2_pdf**](#get_dj_vu2_pdf) | **get** /v5/DjVu2PDF | GetDjVu2PDF
-[**post_dj_vu2_pdf**](#post_dj_vu2_pdf) | **post** /v5/DjVu2PDF | PostDjVu2PDF
+[**cancel_dj_vu2_pdf**](#cancel_dj_vu2_pdf) | **delete** /v5.0/ocr/DjVu2PDF | CancelDjVu2PDF
+[**get_dj_vu2_pdf**](#get_dj_vu2_pdf) | **get** /v5.0/ocr/DjVu2PDF | GetDjVu2PDF
+[**post_dj_vu2_pdf**](#post_dj_vu2_pdf) | **post** /v5.0/ocr/DjVu2PDF | PostDjVu2PDF
 
 # **cancel_dj_vu2_pdf**
 <a name="cancel_dj_vu2_pdf"></a>
@@ -242,7 +242,7 @@ with aspose_ocr_cloud.ApiClient(configuration) as api_client:
             rotate=1,
             make_skew_correct=True,
             make_spell_check=False,
-            make_contrast_correction=True,
+            make_contrast_correction=False,
             make_binarization=True,
             make_upsampling=False,
             dsr_mode=DsrMode("Regions"),

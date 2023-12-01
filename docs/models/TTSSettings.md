@@ -1,9 +1,11 @@
 # aspose_ocr_cloud.model.tts_settings.TTSSettings
 
+TTS setting
+
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+dict, frozendict.frozendict,  | frozendict.frozendict,  | TTS setting | 
 
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes

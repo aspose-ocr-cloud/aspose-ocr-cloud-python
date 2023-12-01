@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_recognize_image**](#cancel_recognize_image) | **delete** /v5/RecognizeImage | CancelRecognizeImage
-[**get_recognize_image**](#get_recognize_image) | **get** /v5/RecognizeImage | GetRecognizeImage
-[**post_recognize_image**](#post_recognize_image) | **post** /v5/RecognizeImage | PostRecognizeImage
+[**cancel_recognize_image**](#cancel_recognize_image) | **delete** /v5.0/ocr/RecognizeImage | CancelRecognizeImage
+[**get_recognize_image**](#get_recognize_image) | **get** /v5.0/ocr/RecognizeImage | GetRecognizeImage
+[**post_recognize_image**](#post_recognize_image) | **post** /v5.0/ocr/RecognizeImage | PostRecognizeImage
 
 # **cancel_recognize_image**
 <a name="cancel_recognize_image"></a>
@@ -242,7 +242,7 @@ with aspose_ocr_cloud.ApiClient(configuration) as api_client:
             make_skew_correct=True,
             make_binarization=False,
             make_spell_check=False,
-            make_contrast_correction=True,
+            make_contrast_correction=False,
             make_upsampling=False,
             dsr_mode=DsrMode("Regions"),
             dsr_confidence=DsrConfidence("Default"),

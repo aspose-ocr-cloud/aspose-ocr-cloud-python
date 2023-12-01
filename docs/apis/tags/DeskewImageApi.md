@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_deskew_image**](#cancel_deskew_image) | **delete** /v5/DeskewImage | CancelDeskewImage
-[**get_deskew_image**](#get_deskew_image) | **get** /v5/DeskewImage | GetDeskewImage
-[**post_deskew_image**](#post_deskew_image) | **post** /v5/DeskewImage | PostDeskewImage
+[**cancel_deskew_image**](#cancel_deskew_image) | **delete** /v5.0/ocr/DeskewImage | CancelDeskewImage
+[**get_deskew_image**](#get_deskew_image) | **get** /v5.0/ocr/DeskewImage | GetDeskewImage
+[**post_deskew_image**](#post_deskew_image) | **post** /v5.0/ocr/DeskewImage | PostDeskewImage
 
 # **cancel_deskew_image**
 <a name="cancel_deskew_image"></a>

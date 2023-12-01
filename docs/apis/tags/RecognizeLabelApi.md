@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_recognize_label**](#cancel_recognize_label) | **delete** /v5/RecognizeLabel | CancelRecognizeLabel
-[**get_recognize_label**](#get_recognize_label) | **get** /v5/RecognizeLabel | GetRecognizeLabel
-[**post_recognize_label**](#post_recognize_label) | **post** /v5/RecognizeLabel | PostRecognizeLabel
+[**cancel_recognize_label**](#cancel_recognize_label) | **delete** /v5.0/ocr/RecognizeLabel | CancelRecognizeLabel
+[**get_recognize_label**](#get_recognize_label) | **get** /v5.0/ocr/RecognizeLabel | GetRecognizeLabel
+[**post_recognize_label**](#post_recognize_label) | **post** /v5.0/ocr/RecognizeLabel | PostRecognizeLabel
 
 # **cancel_recognize_label**
 <a name="cancel_recognize_label"></a>

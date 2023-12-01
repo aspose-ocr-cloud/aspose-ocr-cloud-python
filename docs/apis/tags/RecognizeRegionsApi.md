@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_recognize_regions**](#cancel_recognize_regions) | **delete** /v5/RecognizeRegions | CancelRecognizeRegions
-[**get_recognize_regions**](#get_recognize_regions) | **get** /v5/RecognizeRegions | GetRecognizeRegions
-[**post_recognize_regions**](#post_recognize_regions) | **post** /v5/RecognizeRegions | PostRecognizeRegions
+[**cancel_recognize_regions**](#cancel_recognize_regions) | **delete** /v5.0/ocr/RecognizeRegions | CancelRecognizeRegions
+[**get_recognize_regions**](#get_recognize_regions) | **get** /v5.0/ocr/RecognizeRegions | GetRecognizeRegions
+[**post_recognize_regions**](#post_recognize_regions) | **post** /v5.0/ocr/RecognizeRegions | PostRecognizeRegions
 
 # **cancel_recognize_regions**
 <a name="cancel_recognize_regions"></a>
@@ -241,7 +241,7 @@ with aspose_ocr_cloud.ApiClient(configuration) as api_client:
             language=Language("English"),
             make_skew_correct=True,
             make_spell_check=False,
-            make_contrast_correction=True,
+            make_contrast_correction=False,
             make_upsampling=False,
             regions=[
                 OCRRegion(

@@ -5,9 +5,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_recognize_table**](#cancel_recognize_table) | **delete** /v5/RecognizeTable | CancelRecognizeTable
-[**get_recognize_table**](#get_recognize_table) | **get** /v5/RecognizeTable | GetRecognizeTable
-[**post_recognize_table**](#post_recognize_table) | **post** /v5/RecognizeTable | PostRecognizeTable
+[**cancel_recognize_table**](#cancel_recognize_table) | **delete** /v5.0/ocr/RecognizeTable | CancelRecognizeTable
+[**get_recognize_table**](#get_recognize_table) | **get** /v5.0/ocr/RecognizeTable | GetRecognizeTable
+[**post_recognize_table**](#post_recognize_table) | **post** /v5.0/ocr/RecognizeTable | PostRecognizeTable
 
 # **cancel_recognize_table**
 <a name="cancel_recognize_table"></a>
@@ -241,7 +241,7 @@ with aspose_ocr_cloud.ApiClient(configuration) as api_client:
             language=Language("English"),
             make_skew_correct=True,
             make_spell_check=False,
-            make_contrast_correction=True,
+            make_contrast_correction=False,
             result_type_table=ResultTypeTable("Text"),
             rotate=1,
             make_binarization=True,
