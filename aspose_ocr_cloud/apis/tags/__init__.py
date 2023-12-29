@@ -17,6 +17,7 @@ class TagValues(str, enum.Enum):
     IMAGE_PROCESSING = "ImageProcessing"
     RECOGNIZE_AND_PARSE_INVOICE = "RecognizeAndParseInvoice"
     RECOGNIZE_IMAGE = "RecognizeImage"
+    RECOGNIZE_IMAGE_TRIAL = "RecognizeImageTrial"
     RECOGNIZE_LABEL = "RecognizeLabel"
     RECOGNIZE_PDF = "RecognizePdf"
     RECOGNIZE_RECEIPT = "RecognizeReceipt"

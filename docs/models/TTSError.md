@@ -1,26 +1,22 @@
 # aspose_ocr_cloud.model.tts_error.TTSError
 
-Error to return to SDK client
-
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  | Error to return to SDK client | 
+dict, frozendict.frozendict, None,  | frozendict.frozendict, NoneClass,  |  | 
 
 ### Dictionary Keys
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
-**[messages](#messages)** | list, tuple, None,  | tuple, NoneClass,  | A list of various clear descriptions of the errors | [optional] 
-**[warnings](#warnings)** | list, tuple, None,  | tuple, NoneClass,  | Warning messages - non critical errors: e.g. some data lost | [optional] 
+**[messages](#messages)** | list, tuple, None,  | tuple, NoneClass,  |  | [optional] 
+**[warnings](#warnings)** | list, tuple, None,  | tuple, NoneClass,  |  | [optional] 
 
 # messages
-
-A list of various clear descriptions of the errors
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-list, tuple, None,  | tuple, NoneClass,  | A list of various clear descriptions of the errors | 
+list, tuple, None,  | tuple, NoneClass,  |  | 
 
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
@@ -29,12 +25,10 @@ items | str,  | str,  |  |
 
 # warnings
 
-Warning messages - non critical errors: e.g. some data lost
-
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-list, tuple, None,  | tuple, NoneClass,  | Warning messages - non critical errors: e.g. some data lost | 
+list, tuple, None,  | tuple, NoneClass,  |  | 
 
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes

@@ -30,8 +30,6 @@ class OCRSettingsRecognizeFont(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    OCR Process setting for Font image recognition
     """
 
 

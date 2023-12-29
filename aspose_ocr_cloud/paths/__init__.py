@@ -22,6 +22,7 @@ class PathValues(str, enum.Enum):
     V5_0_OCR_IMAGE_PROCESSING_GET_RESULT_FILE = "/v5.0/ocr/ImageProcessing/GetResultFile"
     V5_0_OCR_RECOGNIZE_AND_PARSE_INVOICE = "/v5.0/ocr/RecognizeAndParseInvoice"
     V5_0_OCR_RECOGNIZE_IMAGE = "/v5.0/ocr/RecognizeImage"
+    V5_0_OCR_RECOGNIZE_IMAGE_TRIAL = "/v5.0/ocr/RecognizeImageTrial"
     V5_0_OCR_RECOGNIZE_LABEL = "/v5.0/ocr/RecognizeLabel"
     V5_0_OCR_RECOGNIZE_PDF = "/v5.0/ocr/RecognizePdf"
     V5_0_OCR_RECOGNIZE_RECEIPT = "/v5.0/ocr/RecognizeReceipt"

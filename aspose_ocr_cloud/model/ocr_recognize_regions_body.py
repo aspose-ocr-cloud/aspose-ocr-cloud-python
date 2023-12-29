@@ -30,8 +30,6 @@ class OCRRecognizeRegionsBody(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    Combines Image data and OCR Recognition settings
     """
 
 

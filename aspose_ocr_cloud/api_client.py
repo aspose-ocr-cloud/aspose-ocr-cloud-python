@@ -1005,7 +1005,7 @@ class ApiClient:
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Aspose.OCR Cloud SDK for Python 23.11.0'
+        self.user_agent = 'Aspose.OCR Cloud SDK for Python 23.12.0'
 
     def __enter__(self):
         return self

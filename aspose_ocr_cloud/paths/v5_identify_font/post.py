@@ -35,7 +35,7 @@ SchemaForRequestBodyApplicationJson = OCRRecognizeFontBody
 
 request_body_ocr_recognize_font_body = api_client.RequestBody(
     content={
-        'application/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8': api_client.MediaType(
+        'application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8': api_client.MediaType(
             schema=SchemaForRequestBodyApplicationJson),
     },
     required=True,
@@ -58,7 +58,7 @@ class ApiResponseFor200(api_client.ApiResponse):
 _response_for_200 = api_client.OpenApiResponse(
     response_cls=ApiResponseFor200,
     content={
-        'text/plain; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8': api_client.MediaType(
+        'text/plain; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8': api_client.MediaType(
             schema=SchemaFor200ResponseBodyTextPlain),
     },
 )
@@ -66,7 +66,7 @@ _status_code_to_response = {
     '200': _response_for_200,
 }
 _all_accept_content_types = (
-    'text/plain; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
+    'text/plain; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
 )
 
 
@@ -75,7 +75,7 @@ class BaseApi(api_client.Api):
     def _post_identify_font_oapg(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
-        content_type: typing_extensions.Literal["application/json; charset=utf-8; charset=utf-8; charset=utf-8"] = ...,
+        content_type: typing_extensions.Literal["application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8"] = ...,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -126,7 +126,7 @@ class BaseApi(api_client.Api):
     def _post_identify_font_oapg(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
-        content_type: str = 'application/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
+        content_type: str = 'application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -194,7 +194,7 @@ class PostIdentifyFont(BaseApi):
     def post_identify_font(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
-        content_type: typing_extensions.Literal["application/json; charset=utf-8; charset=utf-8; charset=utf-8"] = ...,
+        content_type: typing_extensions.Literal["application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8"] = ...,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -245,7 +245,7 @@ class PostIdentifyFont(BaseApi):
     def post_identify_font(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
-        content_type: str = 'application/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
+        content_type: str = 'application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -268,7 +268,7 @@ class ApiForpost(BaseApi):
     def post(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
-        content_type: typing_extensions.Literal["application/json; charset=utf-8; charset=utf-8; charset=utf-8"] = ...,
+        content_type: typing_extensions.Literal["application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8"] = ...,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -319,7 +319,7 @@ class ApiForpost(BaseApi):
     def post(
         self,
         body: typing.Union[SchemaForRequestBodyApplicationJson,],
-        content_type: str = 'application/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
+        content_type: str = 'application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -333,5 +333,10 @@ class ApiForpost(BaseApi):
             timeout=timeout,
             skip_deserialization=skip_deserialization
         )
+
+
+
+
+
 
 

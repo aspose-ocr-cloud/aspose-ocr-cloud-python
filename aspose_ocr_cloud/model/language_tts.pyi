@@ -31,8 +31,6 @@ class LanguageTTS(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    Text-to-speech target language
     """
     
     @schemas.classproperty

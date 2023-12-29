@@ -14,23 +14,21 @@ Key | Input Type | Accessed Type | Description | Notes
 **makeSkewCorrect** | bool,  | BoolClass,  | Option to enable skew correction algorithm. True by default | [optional] if omitted the server will use the default value of True
 **makeSpellCheck** | bool,  | BoolClass,  | Option to enable spell checking and correction algorithm. False by default | [optional] if omitted the server will use the default value of False
 **makeContrastCorrection** | bool,  | BoolClass,  | Option to enable image contrast correction algorithm. True by default | [optional] if omitted the server will use the default value of False
-**Rotate** | decimal.Decimal, int,  | decimal.Decimal,  | Rotate image&gt; | [optional] value must be a 32 bit integer
-**makeBinarization** | bool,  | BoolClass,  | Option to enable image binarization algorithm. False by default | [optional] if omitted the server will use the default value of True
+**Rotate** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 32 bit integer
+**makeBinarization** | bool,  | BoolClass,  |  | [optional] if omitted the server will use the default value of True
 **makeUpsampling** | bool,  | BoolClass,  | Option to enable image up-sampling algorithm to improve quality. True by default | [optional] if omitted the server will use the default value of False
 **dsrMode** | [**DsrMode**](DsrMode.md) | [**DsrMode**](DsrMode.md) |  | [optional] 
 **dsrConfidence** | [**DsrConfidence**](DsrConfidence.md) | [**DsrConfidence**](DsrConfidence.md) |  | [optional] 
 **resultType** | [**ResultType**](ResultType.md) | [**ResultType**](ResultType.md) |  | [optional] 
 **resultTypeTable** | [**ResultTypeTable**](ResultTypeTable.md) | [**ResultTypeTable**](ResultTypeTable.md) |  | [optional] 
-**[regions](#regions)** | list, tuple, None,  | tuple, NoneClass,  | Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion | [optional] 
+**[regions](#regions)** | list, tuple, None,  | tuple, NoneClass,  |  | [optional] 
 
 # regions
-
-Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-list, tuple, None,  | tuple, NoneClass,  | Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion | 
+list, tuple, None,  | tuple, NoneClass,  |  | 
 
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes

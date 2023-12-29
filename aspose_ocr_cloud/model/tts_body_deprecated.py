@@ -30,8 +30,6 @@ class TTSBodyDeprecated(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    Represents input text data with settings
     """
 
 

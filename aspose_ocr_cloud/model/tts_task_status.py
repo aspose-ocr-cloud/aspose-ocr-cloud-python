@@ -31,8 +31,6 @@ class TTSTaskStatus(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    TTS Task status
     """
 
 

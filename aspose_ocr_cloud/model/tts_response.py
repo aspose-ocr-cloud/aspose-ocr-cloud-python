@@ -30,8 +30,6 @@ class TTSResponse(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    Response with Recognition result for specific task ID
     """
 
 

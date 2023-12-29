@@ -75,7 +75,7 @@ class ApiResponseFor200(api_client.ApiResponse):
 _response_for_200 = api_client.OpenApiResponse(
     response_cls=ApiResponseFor200,
     content={
-        'application/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8': api_client.MediaType(
+        'application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8': api_client.MediaType(
             schema=SchemaFor200ResponseBodyApplicationJson),
     },
 )
@@ -94,7 +94,7 @@ class ApiResponseFor401(api_client.ApiResponse):
 _response_for_401 = api_client.OpenApiResponse(
     response_cls=ApiResponseFor401,
     content={
-        'application/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8': api_client.MediaType(
+        'application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8': api_client.MediaType(
             schema=SchemaFor401ResponseBodyApplicationJson),
     },
 )
@@ -103,7 +103,7 @@ _status_code_to_response = {
     '401': _response_for_401,
 }
 _all_accept_content_types = (
-    'application/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
+    'application/json; charset=utf-8; charset=utf-8/json; charset=utf-8; charset=utf-8; charset=utf-8; charset=utf-8',
 )
 
 
@@ -315,5 +315,7 @@ class ApiForget(BaseApi):
             timeout=timeout,
             skip_deserialization=skip_deserialization
         )
+
+
 
 

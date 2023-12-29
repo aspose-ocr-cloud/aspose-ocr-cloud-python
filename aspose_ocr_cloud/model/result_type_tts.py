@@ -31,8 +31,6 @@ class ResultTypeTTS(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    Text-to-speech output types
     """
 
 

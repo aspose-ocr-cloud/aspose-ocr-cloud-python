@@ -30,8 +30,6 @@ class OCRSettingsDjVu2PDF(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    OCR Process setting for Image recognition
     """
 
 

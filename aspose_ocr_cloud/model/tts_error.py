@@ -33,8 +33,6 @@ class TTSError(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    Error to return to SDK client
     """
 
 

@@ -12,6 +12,7 @@ from aspose_ocr_cloud.apis.tags.identify_font_api import IdentifyFontApi
 from aspose_ocr_cloud.apis.tags.image_processing_api import ImageProcessingApi
 from aspose_ocr_cloud.apis.tags.recognize_and_parse_invoice_api import RecognizeAndParseInvoiceApi
 from aspose_ocr_cloud.apis.tags.recognize_image_api import RecognizeImageApi
+from aspose_ocr_cloud.apis.tags.recognize_image_trial_api import RecognizeImageTrialApi
 from aspose_ocr_cloud.apis.tags.recognize_label_api import RecognizeLabelApi
 from aspose_ocr_cloud.apis.tags.recognize_pdf_api import RecognizePdfApi
 from aspose_ocr_cloud.apis.tags.recognize_receipt_api import RecognizeReceiptApi
@@ -35,6 +36,7 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.IMAGE_PROCESSING: ImageProcessingApi,
         TagValues.RECOGNIZE_AND_PARSE_INVOICE: RecognizeAndParseInvoiceApi,
         TagValues.RECOGNIZE_IMAGE: RecognizeImageApi,
+        TagValues.RECOGNIZE_IMAGE_TRIAL: RecognizeImageTrialApi,
         TagValues.RECOGNIZE_LABEL: RecognizeLabelApi,
         TagValues.RECOGNIZE_PDF: RecognizePdfApi,
         TagValues.RECOGNIZE_RECEIPT: RecognizeReceiptApi,
@@ -59,6 +61,7 @@ tag_to_api = TagToApi(
         TagValues.IMAGE_PROCESSING: ImageProcessingApi,
         TagValues.RECOGNIZE_AND_PARSE_INVOICE: RecognizeAndParseInvoiceApi,
         TagValues.RECOGNIZE_IMAGE: RecognizeImageApi,
+        TagValues.RECOGNIZE_IMAGE_TRIAL: RecognizeImageTrialApi,
         TagValues.RECOGNIZE_LABEL: RecognizeLabelApi,
         TagValues.RECOGNIZE_PDF: RecognizePdfApi,
         TagValues.RECOGNIZE_RECEIPT: RecognizeReceiptApi,

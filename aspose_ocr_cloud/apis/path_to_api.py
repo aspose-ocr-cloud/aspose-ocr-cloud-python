@@ -17,6 +17,7 @@ from aspose_ocr_cloud.apis.paths.v5_0_ocr_image_processing_get_result_task impor
 from aspose_ocr_cloud.apis.paths.v5_0_ocr_image_processing_get_result_file import V50OcrImageProcessingGetResultFile
 from aspose_ocr_cloud.apis.paths.v5_0_ocr_recognize_and_parse_invoice import V50OcrRecognizeAndParseInvoice
 from aspose_ocr_cloud.apis.paths.v5_0_ocr_recognize_image import V50OcrRecognizeImage
+from aspose_ocr_cloud.apis.paths.v5_0_ocr_recognize_image_trial import V50OcrRecognizeImageTrial
 from aspose_ocr_cloud.apis.paths.v5_0_ocr_recognize_label import V50OcrRecognizeLabel
 from aspose_ocr_cloud.apis.paths.v5_0_ocr_recognize_pdf import V50OcrRecognizePdf
 from aspose_ocr_cloud.apis.paths.v5_0_ocr_recognize_receipt import V50OcrRecognizeReceipt
@@ -47,6 +48,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.V5_0_OCR_IMAGE_PROCESSING_GET_RESULT_FILE: V50OcrImageProcessingGetResultFile,
         PathValues.V5_0_OCR_RECOGNIZE_AND_PARSE_INVOICE: V50OcrRecognizeAndParseInvoice,
         PathValues.V5_0_OCR_RECOGNIZE_IMAGE: V50OcrRecognizeImage,
+        PathValues.V5_0_OCR_RECOGNIZE_IMAGE_TRIAL: V50OcrRecognizeImageTrial,
         PathValues.V5_0_OCR_RECOGNIZE_LABEL: V50OcrRecognizeLabel,
         PathValues.V5_0_OCR_RECOGNIZE_PDF: V50OcrRecognizePdf,
         PathValues.V5_0_OCR_RECOGNIZE_RECEIPT: V50OcrRecognizeReceipt,
@@ -78,6 +80,7 @@ path_to_api = PathToApi(
         PathValues.V5_0_OCR_IMAGE_PROCESSING_GET_RESULT_FILE: V50OcrImageProcessingGetResultFile,
         PathValues.V5_0_OCR_RECOGNIZE_AND_PARSE_INVOICE: V50OcrRecognizeAndParseInvoice,
         PathValues.V5_0_OCR_RECOGNIZE_IMAGE: V50OcrRecognizeImage,
+        PathValues.V5_0_OCR_RECOGNIZE_IMAGE_TRIAL: V50OcrRecognizeImageTrial,
         PathValues.V5_0_OCR_RECOGNIZE_LABEL: V50OcrRecognizeLabel,
         PathValues.V5_0_OCR_RECOGNIZE_PDF: V50OcrRecognizePdf,
         PathValues.V5_0_OCR_RECOGNIZE_RECEIPT: V50OcrRecognizeReceipt,

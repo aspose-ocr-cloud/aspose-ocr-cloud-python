@@ -30,8 +30,6 @@ class TTSSettings(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    TTS setting
     """
 
 

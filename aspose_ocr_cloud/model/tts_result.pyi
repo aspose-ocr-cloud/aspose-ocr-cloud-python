@@ -30,8 +30,6 @@ class TTSResult(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    Represents information about response after TTS.
     """
 
 

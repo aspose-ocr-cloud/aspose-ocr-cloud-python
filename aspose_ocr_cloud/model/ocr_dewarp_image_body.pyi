@@ -30,8 +30,6 @@ class OCRDewarpImageBody(
     Ref: https://openapi-generator.tech
 
     Do not edit the class manually.
-
-    Combines Image data and OCR processing settings
     """
 
 
