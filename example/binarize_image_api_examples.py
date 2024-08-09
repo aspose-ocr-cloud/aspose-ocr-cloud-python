@@ -4,9 +4,9 @@ import os
 import utils
 
 from aspose_ocr_cloud.configuration import Configuration
-from aspose_ocr_cloud.apis.tags import binarize_image_api
-from aspose_ocr_cloud.model.ocr_binarize_image_body import OCRBinarizeImageBody
-from aspose_ocr_cloud.model.ocr_response import OCRResponse
+from aspose_ocr_cloud.api import binarize_image_api
+from aspose_ocr_cloud.models.ocr_binarize_image_body import OCRBinarizeImageBody
+from aspose_ocr_cloud.models.ocr_response import OCRResponse
 
 
 def run_binarize_image_demo(config: Configuration):
@@ -24,19 +24,18 @@ def run_binarize_image_demo(config: Configuration):
             )
         try:
             # Step 1: perform post request
-            task_id_response = api_instance.post_binarize_image(
-                body=body,
+            task_id = api_instance.post_binarize_image(
+                body
             )
-            task_id = task_id_response.body
             print(f'Your task ID is {task_id}')
 
             # Step 2: perform get result request
             task_response : OCRResponse = api_instance.get_binarize_image(
-                query_params={'id':task_id}
+                id=task_id
             )
-            assert task_response.response.status == 200
-            assert task_response.body['taskStatus'] == 'Completed'
-            binarized_image_bytes = utils.base64_bytes_to_bytes(task_response.body['results'][0]['data'])
+            assert task_response.response_status_code == 'Ok'
+            assert task_response.task_status == 'Completed'
+            binarized_image_bytes = utils.base64_bytes_to_bytes(task_response.results[0].data)
             with open(f"results/{task_id}.png", "wb") as file:
                 file.write(binarized_image_bytes)
             print (f'Result saved to results/{task_id}.png\nTask completed.Press Enter to continue')
