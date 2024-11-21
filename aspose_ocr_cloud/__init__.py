@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "24.8.0"
+__version__ = "24.11.0"
 
 # import apis into sdk package
 from aspose_ocr_cloud.api.binarize_image_api import BinarizeImageApi

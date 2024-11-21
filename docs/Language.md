@@ -302,6 +302,16 @@ Recognition Language
 
 * `MEWARI` (value: `'Mewari'`)
 
+* `UYGHUR` (value: `'Uyghur'`)
+
+* `TELUGU` (value: `'Telugu'`)
+
+* `KANNADA` (value: `'Kannada'`)
+
+* `TAMIL` (value: `'Tamil'`)
+
+* `DEVANAGARI` (value: `'Devanagari'`)
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

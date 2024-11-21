@@ -19,7 +19,6 @@ import multiprocessing
 import sys
 from typing import Optional
 import urllib3
-import json
 
 import http.client as httplib
 
@@ -65,8 +64,7 @@ class Configuration:
 
     _default = None
 
-    def __init__(self, client_id=None, client_secret=None,
-                 host=None,
+    def __init__(self, host=None,
                  api_key=None, api_key_prefix=None,
                  username=None, password=None,
                  access_token=None,
@@ -80,15 +78,10 @@ class Configuration:
                  ) -> None:
         """Constructor
         """
-        self._base_path = "https://api.aspose.cloud" if host is None else host
+        self._base_path = "http://localhost" if host is None else host
         """Default Base url
         """
-        self.client_id = client_id
-        self.client_secret = client_secret
-        self.auth_host = "https://api.aspose.cloud/connect/token"
-        """Client credentials
-        """
-        self.server_index = None
+        self.server_index = 0 if server_index is None and host is None else server_index
         self.server_operation_index = server_operation_index or {}
         """Default server index
         """
@@ -122,7 +115,7 @@ class Configuration:
         self.password = password
         """Password for HTTP basic authentication
         """
-        self.access_token = self.get_token()
+        self.access_token = access_token
         """Access token
         """
         self.logger = {}
@@ -374,21 +367,6 @@ class Configuration:
         return urllib3.util.make_headers(
             basic_auth=username + ':' + password
         ).get('authorization')
-    
-    
-    def get_token(self):
-        """Gets OAuth2 bearer token using client creds
-        """
-        if not (self.client_id is None or self.client_id == ""):
-            # call from __init__ - CERT not ready
-            # http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
-            http = urllib3.PoolManager()
-            headers = {"ContentType": "application/x-www-form-urlencoded", "Accept": "application/json;charset=UTF-8"}
-            fields = {'client_id': self.client_id, 'client_secret': self.client_secret, 'grant_type': 'client_credentials'}
-            r = http.request('POST', self.auth_host, headers=headers, fields=fields)
-            return json.loads(r.data)['access_token']
-        else: return None
-
 
     def auth_settings(self):
         """Gets Auth Settings dict for api client.
@@ -414,7 +392,7 @@ class Configuration:
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 5.0\n"\
-               "SDK Package Version: 24.8.0".\
+               "SDK Package Version: 24.11.0".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):

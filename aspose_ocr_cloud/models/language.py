@@ -175,6 +175,11 @@ class Language(str, Enum):
     WAGDI = 'Wagdi'
     MALVI = 'Malvi'
     MEWARI = 'Mewari'
+    UYGHUR = 'Uyghur'
+    TELUGU = 'Telugu'
+    KANNADA = 'Kannada'
+    TAMIL = 'Tamil'
+    DEVANAGARI = 'Devanagari'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
